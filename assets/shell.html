@@ -1,0 +1,97 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>__TITLE__</title><style>__CSS__</style></head><body>
+<a class="skip" href="#main" data-t="skip"></a><div class="shell" id="shell">
+<aside class="rail"><button id="closeDirectory" data-t="close"></button><div class="brand" data-t="brand"></div><p class="subbrand">__TITLE__</p><label for="course" data-t="material"></label><select id="course"></select><label for="search" data-t="search"></label><input id="search" type="search"><div class="filters"><button data-filter="all" data-t="all"></button><button data-filter="star" data-t="saved"></button></div><nav id="nav"></nav><div class="railfoot"><span id="progressText"></span><progress id="progress"></progress><p data-t="keys"></p></div></aside>
+<div class="workspace"><header class="toolbar">
+<div class="toolgroup">
+  <button id="menu" class="menu" data-t="menu"></button>
+  <button id="prev" class="page-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 3-5 5 5 5"/></svg></button>
+  <form id="jumpForm" class="jump"><input id="pageNumber" type="number" min="1" required><span id="pageTotal"></span></form>
+  <button id="next" class="page-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+  <button id="sourceBack" class="hide" data-t="returnSource"></button>
+</div>
+<div class="toolgroup">
+  <button id="openSheet" data-t="sheet"></button>
+
+  <button id="aiHandoff" hidden></button>
+  <button id="lang"></button>
+  <details id="moreMenu" class="toolbar-more">
+    <summary data-t="more"></summary>
+    <div class="toolbar-popover">
+      <div id="moreActions" class="toolbar-actions">
+        <button id="openTour"></button>
+        <button id="openReview" data-t="review"></button><button id="export" data-t="export"></button>
+        <button id="editPage"></button>
+      </div>
+      <fieldset>
+        <legend data-t="theme"></legend>
+        <label><input type="radio" name="readerTheme" value="mist" checked><span data-t="mist"></span></label>
+        <label><input type="radio" name="readerTheme" value="sage"><span data-t="sage"></span></label>
+        <label><input type="radio" name="readerTheme" value="graphite"><span data-t="graphite"></span></label>
+      </fieldset>
+    </div>
+  </details>
+</div></header>
+<div id="storageWarning" class="warning hide" role="status"></div>
+<main class="main" id="main"><div class="breadcrumb" id="crumb"></div><div class="headingrow"><div><h1 id="title"></h1><p id="originalTitle"></p></div><div class="marktools"><button id="star"></button><button id="read"></button><button id="reviewPage"></button></div></div>
+<div class="reading"><section class="slidecol" aria-labelledby="sourceHeading"><header class="source-heading"><h2 id="sourceHeading" data-t="sourceOriginal"></h2><button id="zoom" data-t="zoom"></button></header><div class="slideframe"><img id="slide" alt=""><div class="pdfInk" aria-hidden="true"><div id="pdfMarks"></div><div id="pdfSelection"></div></div><div id="textLayer" class="textLayer" data-region="slide"></div></div><div class="slidecaption"><span id="sourceTextHint"></span><span id="pdfSourceStatus" role="status"></span></div></section>
+<section class="explain"><h2 data-t="idea"></h2><p class="idea" id="idea" data-region="idea"></p><div class="key" id="keyBox"><span data-t="key"></span><div id="key" data-region="key"></div><button id="addKey" data-t="addKey"></button></div><h2 data-t="detail"></h2><div class="bodytext" id="body" data-region="body"></div><details id="links" class="related"></details><section class="quiz"><h2 data-t="check"></h2><p id="question"></p><details id="answerDetail"><summary data-t="answer"></summary><div id="answer" data-region="answer"></div></details></section><section id="annotations"><h2 data-t="highlights"></h2><div id="highlightList"></div></section><section class="notebox"><label for="note" data-t="notes"></label><textarea id="note"></textarea><p id="noteStatus" class="notestatus" role="status"></p><button id="addNote" data-t="addNote"></button></section></section></div><div class="bottomnav"><button id="bottomPrev" data-t="prev"></button><button class="primary" id="readNext" data-t="readNext"></button></div><footer class="footer" data-t="footer"></footer></main>
+<section id="sheetView" class="main hide"><div class="sheetbar"><button id="closeSheet" data-t="back"></button><h1 data-t="sheetTitle"></h1><button id="newEntry" data-t="newEntry"></button><button id="printSheet" data-t="printSheet"></button><button id="exportSheet" data-t="exportSheet"></button></div><p data-t="sheetHelp"></p><div class="sheetsettings"><label><span data-t="sheetLanguage"></span><select id="sheetLanguage"><option value="original" data-t="originalLanguage"></option><option value="zh">中文</option><option value="en">English</option><option value="both" data-t="bothLanguage"></option></select></label><label><span data-t="columns"></span><select id="columns"><option value="2">2</option><option value="3">3</option></select></label><label><span data-t="fontSize"></span><input id="fontSize" type="number" min="7" max="16" step=".5"></label><label><span data-t="lineHeight"></span><input id="lineHeight" type="number" min="1" max="1.8" step=".05"></label><label><span data-t="margin"></span><input id="margin" type="number" min="5" max="20"></label></div><div class="sheetStatus"><p id="overflow" class="warning" role="status"></p><button id="showPaper" data-t="showPaper"></button></div><div class="sheetworkspace"><div id="sheetEntries"></div><div class="sheetpreview"><div class="paperwrap"><span data-t="front"></span><div class="paper" id="front"><div class="paperhead">__TITLE__ · A</div><div class="paperbody"></div></div></div><div class="paperwrap"><span data-t="backside"></span><div class="paper" id="back"><div class="paperhead">__TITLE__ · B</div><div class="paperbody"></div></div></div></div></div></section>
+</div></div><div id="selectionTools" class="selectionTools hide"><button id="markSelection" data-t="mark"></button><button id="sheetSelection" data-t="addSelection"></button></div><dialog id="zoomDialog"><div class="dialogbar"><p id="zoomTitle"></p><button id="closeZoom" data-t="close"></button></div><div id="zoomFrame"><img id="zoomImage" alt=""><div id="zoomLocations" aria-hidden="true"></div></div></dialog><div id="toast" class="toast hide" role="status"></div><noscript>此讲义需要启用 JavaScript / This reader requires JavaScript.</noscript>
+<dialog id="reviewDialog" class="reviewDialog" aria-labelledby="reviewHeading">
+  <header class="utilityHeader"><h2 id="reviewHeading" data-t="review"></h2><button id="closeReview" data-t="close"></button></header>
+  <div id="reviewList"></div>
+  <footer class="utilityFooter"><span id="reviewStatus" role="status"></span><button id="collectReview" data-t="collectReview" disabled></button></footer>
+</dialog>
+<dialog id="clipDialog" class="reviewDialog" aria-labelledby="clipHeading">
+  <form id="clipForm">
+    <header class="utilityHeader"><h2 id="clipHeading" data-t="clipHeading"></h2><button id="closeClip" type="button" data-t="close"></button></header>
+    <p id="clipSource"></p>
+    <label for="clipText" data-t="edit"></label><textarea id="clipText" rows="5" required></textarea>
+    <div id="clipPreview" class="paperText"></div>
+    <footer class="utilityFooter"><button data-t="confirmClip"></button></footer>
+  </form>
+</dialog>
+<dialog id="pageEditor" aria-labelledby="editHeading" aria-describedby="editSource">
+  <form id="editForm">
+    <header class="edit-header">
+      <div>
+        <h2 id="editHeading" tabindex="-1" autofocus></h2>
+        <p id="editSource"></p>
+      </div>
+      <button type="button" id="closeEditor"><span aria-hidden="true">×</span></button>
+    </header>
+    <div id="editFields"></div>
+    <footer class="edit-actions">
+      <button id="saveEdit" class="primary">保存</button>
+      <button type="button" id="resetEdit">恢复原文</button>
+      <button type="button" id="cancelEdit">取消</button>
+    </footer>
+  </form>
+</dialog>
+<dialog id="aiHandoffDialog" class="reviewDialog" aria-labelledby="aiHandoffTitle">
+  <form id="aiHandoffForm">
+    <header class="utilityHeader">
+      <h2 id="aiHandoffTitle"></h2>
+      <button id="closeAiHandoff" type="button" data-t="close"></button>
+    </header>
+    <p id="aiHandoffHint"></p>
+    <label id="aiQuestionLabel" for="aiQuestion"></label>
+    <input id="aiQuestion" required maxlength="2000">
+    <button id="copyAiQuestion" type="submit"></button>
+    <p id="aiCopyStatus" role="status"></p>
+    <textarea id="aiPrompt" aria-label="AI prompt" rows="8" readonly hidden></textarea>
+  </form>
+</dialog>
+<dialog id="readerTour" class="reviewDialog" aria-labelledby="tourTitle" aria-describedby="tourBody">
+  <header class="utilityHeader"><h2 id="tourTitle"></h2><button id="tourSkip" type="button"></button></header>
+  <div class="tour-content">
+    <p id="tourProgress"></p>
+    <p id="tourBody"></p>
+  </div>
+  <footer class="utilityFooter">
+    <button id="tourBack" type="button"></button>
+    <button id="tourNext" type="button" autofocus></button>
+  </footer>
+</dialog>
+<script id="config" type="application/json">__CONFIG__</script>
+<script id="data" type="application/json">__DATA__</script><script>__JS__</script></body></html>
